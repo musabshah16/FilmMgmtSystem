@@ -1,0 +1,256 @@
+﻿@model FilmMgmtSystem.Entities.Film
+
+
+
+@{ ViewData["Title"] = "Book Film"; }
+<body>
+
+
+    <style>        body {
+            margin: 0;
+            height: 100vh;
+            font-weight: 100;
+            background-image: url(https://media.istockphoto.com/photos/residential-housing-background-with-multiple-rooftops-picture-id1192524192?k=20&m=1192524192&s=170667a&w=0&h=CecxVJNc6AK445STEqOQ7uvAa1RjZdTo9J7v7TBeteQ=);
+            overflow-y: hidden;
+            -o-animation: fadeIn 1 1s ease-out;
+            animation: fadeIn 1 1000s;
+        }
+.light {
+  position: absolute;
+  width: 0px;
+  opacity: .75;
+  background-color: white;
+  box-shadow: #e9f1f1 0px 0px 20px 2px;
+  opacity: 0;
+  top: 100vh;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+.main
+{
+margin-top: 500px;
+}
+
+#amount {
+  font-size: 12px;
+}
+
+#amount strong {
+  font-size: 14px;
+}#card-back {
+  top: 40px;
+  right: 0;
+  z-index: -2;
+}#card-btn {
+  background-color:rgb(59, 104, 254);
+  color: #090909;
+  position: absolute;
+  bottom: -55px;
+  right: 0;
+  width: 150px;
+  border-radius: 8px;
+  height: 42px;
+  font-size: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}#card-btn:hover {
+  background-color: rgb(255, 7, 119);
+}#card-cvc {
+  width: 60px;
+  margin-bottom: 0;
+}#card-front,
+#card-back {
+  position: absolute;
+  background-color: #000000;
+  width: 390px;
+  height: 250px;
+  border-radius: 6px;
+  padding: 20px 30px 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: white;
+}#card-image {
+  float: right;
+  height: 100%;
+}
+#card-image i {
+  font-size: 40px;
+}
+#card-month {
+  width: 45% !important;
+}
+#card-number,
+#card-holder {
+  width: 100%;
+}
+#card-stripe {
+  width: 100%;
+  height: 55px;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+}
+#card-year {
+  width: 45%;
+  float: right;
+}
+#cardholder-container {
+  width: 60%;
+  display: inline-block;
+}
+
+#cvc-container {
+  position: absolute;
+  width: 110px;
+  right: -115px;
+  bottom: -10px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+#cvc-container label {
+  width: 100%;
+}
+        #form-container {
+            margin: auto;
+            margin-top:200px;
+            width: 500px;
+            height: 290px;
+            position: relative;
+        }
+#exp-container {
+  margin-left: 10px;
+  width: 32%;
+  display: inline-block;
+  float:none;
+}
+
+.hidden {
+  display: none;
+}
+
+#image-container {
+  width: 100%;
+  position: relative;
+  height: 55px;
+  margin-bottom: 5px;
+  line-height: 55px;
+}
+input {
+  border: none;
+  outline: none;
+  background-color: #fffefe;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  margin: 0 0 25px;
+  color: rgb(0, 0, 0);
+  font-size: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: lato, 'helvetica-light', 'sans-serif';
+  letter-spacing: .7px;
+}
+label {
+  display: block;
+  margin: 0 auto 7px;
+}
+
+#shadow {
+  position: absolute;
+  right: 0;
+  width: 284px;
+  height: 214px;
+  top: 36px;
+  background-color: #000;
+  z-index: -1;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}</style>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <p id='head1' class='header'></p>
+    <p id='head2' class='header'></p>
+    <p id='head3' class='header'></p>
+    <p id='head4' class='header'></p>
+    <p id='head5' class='header'></p>
+    
+    <div class="main">
+        <div id="card-success" class="hidden">
+
+        </div>
+
+        <div id="form-container">
+
+            <div id="card-front">
+                <div id="shadow"></div>
+                <div id="image-container">
+                    
+                    <span id="card-image">
+
+                    </span>
+                </div>
+
+
+                <label for="card-number">
+                    Card Number
+                </label>
+                <input type="text" id="card-number" placeholder="1234 5678 9101 1112" length="16">
+                <div id="cardholder-container">
+                    <label for="card-holder">
+                        Card Holder
+                    </label>
+                    <input type="text" id="card-holder" placeholder="e.g. John Doe" />
+                </div>
+
+                <div id="exp-container">
+                    <label for="card-exp">
+                        Expiration
+                    </label>
+                    <input id="card-month" type="text" placeholder=" MM" length="2">
+                    <input id="card-year" type="text" placeholder="  YY" length="4">
+                </div>
+                <div id="cvc-container">
+                    <label for="card-cvc"> CVC/CVV</label>
+                    <input id="card-cvc" placeholder="   XXX" type="text" min-length="3" max-length="4">
+
+                </div>
+
+
+            </div>
+
+            <div id="card-back">
+                <div id="card-stripe">
+                </div>
+
+            </div>
+
+
+            <button type="button" id="card-btn" (click)="payment()">Submit</button>
+
+        </div>
+
+       
+        <br>
+        <br>
+        <br><br>
+    </div>
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script src="https://use.fontawesome.com/f1e0bf0cbc.js"></script>

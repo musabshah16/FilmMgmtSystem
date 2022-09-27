@@ -1,0 +1,116 @@
+﻿
+@model IEnumerable<FilmMgmtSystem.Entities.Film>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{ string menuTextColor = "text-white"; }
+<style>
+    body {
+        background-image: url("https://indianonlineseller.com/images/blogs/editor/top-hindi-ott-platforms.jpg");
+        background-color: #cccccc;
+    }
+
+    
+</style>
+
+
+    <h1>Films</h1>
+    <form asp-controller="Film" asp-action="SearchFilm" method="get" />
+    <center>
+        <a>
+            Search: <input type="text" name="title" />
+            <input class="btn-success" type="submit" value="Search" />
+        </a>
+    </center>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table @menuTextColor">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FilmDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Releaseyear)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rentalduration)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FilmLength)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Replacementcost)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rating)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Specialfeatures)
+                </th>
+                <th>
+                    Edit
+                </th>
+                <th>
+                    Details
+                </th>
+                <th>
+                    Delete
+                </th>
+                <th> Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FilmDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Releaseyear)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rentalduration)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FilmLength)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Replacementcost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rating)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Specialfeatures)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Filmid">Edit</a>
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Filmid">Details</a>
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.Filmid">Delete</a>
+                    </td>
+                    <td>
+
+                        <a class="nav-link text-dark" asp-area="" asp-controller="BookFilm" asp-action="Index">Book Film</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

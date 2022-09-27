@@ -1,0 +1,502 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@{ string media = "text-black"; }
+@{ string keyframes = "text-black"; }
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<!--Main Navigation-->
+<header>
+    <style>
+
+#intro {
+        /* background-image: url("https://content3.jdmagicbox.com/comp/def_content/home_loans/default-home-loans-5.jpg?clr=660000"); */
+        /*background-repeat:no-repeat;*/
+        background-size:cover;
+        height: 10vh;
+        width:1700px;
+        margin-left: -260px;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 1500px) {
+        #intro {
+          margin-top: -58.59px;
+        }
+      }
+
+
+
+.mask
+{
+background-color: black;
+}
+#top-links
+{
+margin-top: 100px;
+}
+
+.image
+{
+text-align: center;
+}
+h2{
+
+margin-top: 10px;
+margin-left: 300px;
+margin-right: 300px;
+text-align: center;
+background-color: rgb(68, 244, 20);
+
+}
+.aboutus{
+
+color: rgb(255, 141, 12);
+margin-left: 10px;
+margin-right: 10px;
+font-weight: bold;
+font-size: 30px;
+}
+
+.buttons {
+margin: 10%;
+text-align: center;
+}
+
+.button-hover {
+width: 200px;
+font-size: 16px;
+font-weight: 600;
+color: #fff;
+cursor: pointer;
+margin: 20px;
+height: 55px;
+text-align:center;
+border: none;
+background-size: 300%100%;
+
+border-radius: 50px;
+-o-transition: all.4sease-in-out;
+-webkit-transition: all.4sease-in-out;
+transition: all.4sease-in-out;
+}
+        .backcolor {
+            background-color: rgb(112, 131, 134);
+            width: 1700px;
+            margin-left: -260px
+        }
+@*button{
+
+border: none;
+}*@
+
+@*button:hover {
+color:black;
+font-weight: bolder;
+background-image: linear-gradient(to right, #fb0909, #FCEE21, #00A8C5, #11f119);
+box-shadow: 014px25px0rgba(255, 24, 255, 0.75);
+}*@
+        .login {
+            color: rgb(255, 141, 12);
+            margin-left: 50px;
+            margin-right: 50px;
+            font-weight: bold;
+            font-size: 60px;
+
+        }
+        .register{
+            color: rgb(0, 0, 0);
+            margin-left: 400px;
+            font-weight: bold;
+        }
+        #social_media {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            width: 1700px;
+            margin-left: -260px;
+        }
+
+
+
+
+.text{
+    color:rgb(255, 24, 162);
+}
+
+.profile
+{
+    width: 500px;
+    height: 35px;
+    font-family:Comic sans MS;
+    letter-spacing: 10px;
+    color: rgb(196, 255, 70);
+    background-color: rgb(6, 6, 6);
+    font-size: 15px;
+}
+.img-fluid1{
+    margin-left: -1300px;
+    width: 160px;
+    margin-top: -20px;
+       height:150px;
+        border-radius: 50%;
+
+    }
+    h1{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color:rgb(33, 174, 255);
+        font-weight: bold;
+        margin-top: -70px;
+        margin-left: 390px;
+    }
+.residential,.commercial,.industrial
+ {
+    text-align: center;
+ }
+
+      .content h1 {
+        color: #fff;
+        font-size: 70px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+
+      .content h1:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 2px rgb(255, 0, 0);
+      }
+
+      .content h1:nth-child(2) {
+        color:rgb(255, 255, 255);
+        animation: animate 2s ease-in-out infinite;
+      }
+      h4
+{
+    color: #11f119;
+}
+h3{
+    font-weight: bolder;
+    color: black;
+}
+      @keyframes animate {
+        0%,
+        100% {
+          clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+          );
+        }
+
+        50% {
+          clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+          );
+        }
+
+      .card
+      {
+        border:10px;
+        background-color: black;
+      }
+      .card-body{
+        color: white;
+      }
+
+
+      .ul{
+        margin-top: 25px;
+        margin-left: 620px;
+        display: flex;
+      }
+      .ul li{
+
+        position: relative;
+        display: block;
+        color: #666;
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        background: #171515;
+        line-height: 50px;
+        border-radius: 50%;
+        margin: 0 15px;
+        cursor: pointer;
+        transition: .5s;
+      }
+      .ul li:before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: inherit;
+        width: inherit;
+        /* background: #d35400; */
+        border-radius: 50%;
+        transform: scale(.9);
+        z-index: -1;
+        transition: .5s;
+      }
+
+
+
+      .ul li:nth-child(1):before{
+        background: #4267B2;
+      }
+      .ul li:nth-child(2):before{
+        background: #E1306C;
+      }
+      .ul li:nth-child(3):before{
+        background: #1DA1F2;
+      }
+      .ul li:nth-child(4):before{
+        background: #ff0000;
+      }
+      .ul li:nth-child(5):before{
+        background: #2867B2;
+      }
+
+      .ul li:hover:before{
+        filter: blur(3px);
+        transform: scale(1.2);
+        /* /* box-shadow: 0 0 15px #d35400;  */
+      }
+      .ul li:nth-child(1):hover:before{
+        box-shadow: 0 0 15px #4267B2;
+      }
+       .ul li:nth-child(2):hover:before{
+        box-shadow: 0 0 15px #E1306C;
+      }
+
+      .ul li:nth-child(3):hover:before{
+        box-shadow: 0 0 15px #1DA1F2;
+      }
+
+      .ul li:nth-child(4):hover:before{
+        box-shadow: 0 0 15px #ff0000;
+      }
+      .ul li:nth-child(5):hover:before{
+        box-shadow: 0 0 15px #2867B2;
+      }
+
+      .ul li:nth-child(1):hover{
+        color: #456cba;
+        box-shadow: 0 0 25px #4267B2;
+        text-shadow: 0 0 25px #4267B2;
+      }
+      .ul li:nth-child(2):hover{
+        color: #e23670;
+        box-shadow: 0 0 25px #E1306C;
+        text-shadow: 0 0 25px #E1306C;
+      }
+      .ul li:nth-child(3):hover{
+        color: #26a4f2;
+        box-shadow: 0 0 25px #1DA1F2;
+        text-shadow: 0 0 25px #1DA1F2;
+      }
+      .ul li:nth-child(4):hover{
+        color: #ff1a1a;
+        box-shadow: 0 0 25px #ff0000;
+        text-shadow: 0 0 25px #ff0000;
+      }
+
+      .ul li:nth-child(5):hover{
+        color: #2a6cbb;
+        box-shadow: 0 0 25px #2867B2;
+        text-shadow: 0 0 25px #2867B2;
+      }
+   .media1
+   {
+    color: #4267B2;
+   }
+   .media2
+   {
+    color: #E1306C;
+   }
+   .media3
+   {
+    color: #1DA1F2;
+   }
+   .media4
+   {
+    color: #ff0000;
+   }
+   .media5
+   {
+    color: #2867B2;
+   }
+
+
+
+
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 1500;">
+        <div class="container-fluid">
+            <!-- Navbar brand -->
+
+            <div class="collapse navbar-collapse" id="navbarExample01">
+
+
+
+            </div>
+        </div>
+    </nav>
+    <div id="intro">
+        <div class="mask">
+            <div class="container d-flex align-items-center justify-content-center text-center h-100">
+                <div class="text-white">
+                    <br> <br>
+                    <br>
+
+                    <img src="https://s.studiobinder.com/wp-content/uploads/2021/07/What-is-the-Studio-System-%E2%80%94-Hollywood-s-Studio-Era-Explained-Featured.jpg"
+                         class="img-fluid1">
+                    <div class="content">
+                        <h1 class="mb-2">Film Management System</h1>
+                        <h1 class="mb-2">Film Management System</h1>
+                        <h4 class="mb-2"><i> Welcome To Film Management System May the Force be with you. !!! </i><br></h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>  <br>
+    </div>
+
+    <br><br><br> <br><br><br> <br>
+                              <div class="backcolor">
+
+                                  <br> &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
+                               <button class="profile" [routerLink]="['/aboutus']"> ABOUT US </button> &nbsp;                                 
+
+                                  &nbsp;
+
+                                  <a class="profile" asp-area="" asp-controller="Actor" asp-action="Index">Actor</a>
+                                  <a class="profile" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
+                                  <a class="profile" asp-area="" asp-controller="Film" asp-action="Index">Film</a>
+                                  &nbsp;
+                                  &nbsp;
+                                  <a class="profile" asp-area="" asp-controller="Language" asp-action="Index">Language</a>
+
+                                  <br><br><br><br>
+                              </div>
+</header>
+<!--Main Navigation-->
+<div class="backcolor">
+    <main>
+         
+        <div class="container">
+            <!--Section: Content-->
+            <section class="text-center">
+                <marquee behavior="scroll" direction="left" scrollamount="5">
+                    <h4 class="mb-4"><h3>It’s supposed to be hard.<strong class="support"><i> If it wasn’t hard, </i></strong> everyone would do it. The hard… is what makes it great!</h3></h4>
+                </marquee>
+
+                <marquee behavior="scroll" direction="left" scrollamount="15">
+                    <div class="row">
+                        <!--<div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card">
+
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img width="413px" height="275px" src="https://wallpaperaccess.com/full/3060214.jpg">-->
+                        @*<a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>*@
+                        <!--</div>
+                    <!--<div class="card-body">-->
+                        -->
+                        <!--@* <h5 class="residential"> Residential</h5>*@
+                                    @*<p class="card-text">
+                        &nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;A dream come true apartment available in <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pocket-friendly price.
+                    </p>*@-->
+                        <!--</div>-->
+                        <!--</div>
+                    </div>-->
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                    <img width="413px" height="275px" src="https://th.bing.com/th/id/OIP.-VyCoDVIFHeGVi8qxpZJ_wHaK-?pid=ImgDet&rs=1" class="img-fluid" />
+                                    @*<a href="#!">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </a>*@
+                                </div>
+                                <!--<div class="card-body">-->
+                                @* <h5 class="commercial">Commercial</h5>*@
+                                @* <p class="card-text">
+                                    &nbsp;&nbsp;   Count on us and find your dream properties today.
+                                </p>*@
+                                <!--</div>-->
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                    <img width="413px" height="275px" src="https://th.bing.com/th/id/OIP.vFvYHls-pgdLlXdgF06pvQHaKe?pid=ImgDet&rs=1" class="img-fluid" />
+                                    @*<a href="#!">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </a>*@
+                                </div>
+                                <!--<div class="card-body">-->
+                                @* <h5 class="industrial">Industrial</h5>*@
+                                @*<p class="card-text">
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  Caring your property of dreams.
+                                </p>*@
+                                <!--</div>-->
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </marquee>
+            </section>
+        </div>
+        <!--Section: Content-->
+
+    </main>
+
+    <br><br>
+</div>
+
+<!--Main layout-->
+
+
+<hr class="m-0" />
+<div id="social_media" class="text-center py-4 align-items-center">
+    <p><strong> <h5>Follow FMS On Social Media</h5></strong> </p>
+    <ul class="ul">
+        <li><a class="media1" href="https://www.facebook.com/CapgeminiIndia" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a class="media2" href="https://www.instagram.com/capgeminide/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a class="media3" href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="media4" href="https://www.youtube.com/c/OneDayEngineer" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        <li><a class="media5" href="https://www.linkedin.com/company/capgemini/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+    </ul>
+
+</div>

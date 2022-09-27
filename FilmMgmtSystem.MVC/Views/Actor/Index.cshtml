@@ -1,0 +1,50 @@
+﻿@model IEnumerable<FilmMgmtSystem.Entities.Actor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{ string menuTextColor = "text-white"; }
+<style>
+    body {
+        background-image: url("https://static.toiimg.com/photo/78148266.cms");
+        background-color: #cccccc;
+    }
+</style>
+
+<h1>Actors</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table @menuTextColor">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Actorid">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Actorid">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Actorid">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

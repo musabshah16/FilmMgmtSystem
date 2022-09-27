@@ -1,0 +1,44 @@
+﻿@model IEnumerable<FilmMgmtSystem.Entities.Language>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{ string menuTextColor = "text-white"; }
+<style>
+    body {
+        background-image: url("https://www.voiceofdan.co.uk/wp-content/uploads/2020/08/adr-and-dubbing.jpg");
+        background-color: #cccccc;
+    }
+</style>
+
+<h1>Languagesx</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table @menuTextColor">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Languageid">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Languageid">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Languageid">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

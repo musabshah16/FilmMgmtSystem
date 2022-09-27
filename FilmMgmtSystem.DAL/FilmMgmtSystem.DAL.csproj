@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FilmMgmtSystem.EFCore\FilmMgmtSystem.EFCore.csproj" />
+    <ProjectReference Include="..\FilmMgmtSystem.Entities\FilmMgmtSystem.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

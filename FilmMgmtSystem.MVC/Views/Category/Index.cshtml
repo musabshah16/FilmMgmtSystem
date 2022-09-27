@@ -1,0 +1,44 @@
+﻿@model IEnumerable<FilmMgmtSystem.Entities.Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{ string menuTextColor = "text-white"; }
+<style>
+    body {
+        background-image: url("https://th.bing.com/th/id/R.a9c3acefb8c83a2fa1f628b548700008?rik=VmQE%2fQa%2bBv0zng&riu=http%3a%2f%2fp.motionelements.com%2fstock-video%2farts%2fme1654173-movie-genres-related-words-background-loop-hd-a0144.jpg&ehk=b9%2bOee2z4pmue7N6bgcCXslnyHDcUpQ9rHtMC6XDTc0%3d&risl=&pid=ImgRaw&r=0");
+        background-color: #cccccc;
+    }
+</style>
+
+<h1>Categories</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table @menuTextColor">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Categoryid">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Categoryid">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Categoryid">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
